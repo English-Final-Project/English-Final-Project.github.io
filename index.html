@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./src/css/menu.css"> 
     <link rel="stylesheet" type="text/css" href="./src/css/content.css"> 
-    <title>Automation Nation</title>
+    <title>English Final Project</title>
     
 </head>
 <body>
@@ -28,21 +28,51 @@
         </div>
         <nav class="links">
             <ul>
-                <li class="Home">         <a href="index.html" class="active"> Home</a>          </li>
+                <li class="Home">   <a href="./index.html" class="active"> Home        </a></li>
+                <li class="Music">  <a href="./Music.html">                Music        </a></li>
                 
             </ul>
         </nav>
     </header>
     <main class="content">
-        <div class="robot"><center><h1>hello</h1></center></div>
-        <div class="robot"></div>
-        <div class="robot"></div>
-        <div class="robot"></div>
+        <div class="box">
+            <h3>Why can music affect mood?</h3>
+            <p>
+                Our brain immediately responds to all external stimuli, and the sound of music is one of them. 
+                The concert stimulates the part of the brain that produces dopamine hormone. 
+                This hormone affects emotional behavior and mood. 
+                The influence of music is behavioral and neurological. 
+                In other words, this means that music not only affects emotions, 
+                but also affects things that we cannot control.
+            </p>
+            <a href="javascript:void();" class="readmore-btn">Read More</a>
+        </div>
+        <div class="subContent">
+            <div class="">
+                
+                <br>
+                <br>
+                Understanding how music affects your mood is important for several reasons. 
+                In this way, you can change your perception of what kind of music you listen to 
+                and understand how it affects you.
+                <br>
+                <br>
+                If you feel anxious and irritable, it may be because of your favorite music. 
+                Maybe it's time to start listening to more calm music, it can lift the spirits and increase energy. 
+                On the contrary, if you feel that you need more simplicity or creativity to complete a difficult task, 
+                then right, the best music may add some coping ability to you.      
+            </div>
+        </div>
+
     </main>
     <script src="./src/js/jquery-3.6.0.min.js"></script>
     <script>
       window.onload=function(){
+        init();
+      }
+      function init(){
         mAction();
+        readmore();
       }
       function mAction(){
         $("menu").click(function (){    
@@ -50,6 +80,14 @@
             $(".links ul").toggleClass("active");
             $(".dropdown").toggleClass("active");
         });
+      }
+      function readmore(){
+        $(".readmore-btn").on('click', function(){
+            $(this).parent().toggleClass("showContent");
+            
+            var replaceText = $(this).parent().hasClass("showContent") ? "Read Less" : "Read More"
+            $(this).text(replaceText);
+        })
       }
     </script>
 </body>
