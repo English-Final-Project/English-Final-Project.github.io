@@ -159,21 +159,23 @@ body {
 }
 
 .menu .logo {
-    padding-top: 5px;
-    padding-left: 5px;
     text-decoration: none;
     color: #57be83;
     display: inline-flex;
 }
+
 .menu .logo .name {
     font-style: normal;
     display: inline-block;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     padding: 11.5px 15px;
 }
 
-
+.piclogo{
+    padding-top: 5px;
+    padding-left: 5px;
+}
 .dropdown {
     opacity: 0;
     display: none;
