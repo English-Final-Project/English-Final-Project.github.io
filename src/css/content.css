@@ -197,6 +197,7 @@ p {
     margin-right: auto;
     max-width: 700px;
     color: rgba(0,0,0,1);
+    border: thin solid #9fc2a4
   }
   .mtable th{
     background-color: #8daa91;
@@ -277,5 +278,12 @@ p {
     .card-color-2 h1{
       padding: 230px 0px 50px 0px;
     }
+    .mtable th,
+    .mtable td{
+      font-size: 0.4em;
+    }
 
+    .mtable .rowheader01{
+      font-size: 0.1em;
+    }
   }
