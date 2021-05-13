@@ -185,6 +185,12 @@ p {
 
   .open-content .mood2{
     display: block;
+    position: relative;
+    z-index: 5;
+    width: 90%;
+    margin-left: 3%;
+    margin-top: 20px;
+
   }
   .mtable{
     margin-left: auto;
