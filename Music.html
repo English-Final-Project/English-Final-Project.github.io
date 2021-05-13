@@ -34,5 +34,29 @@
     </header>
 
     <script src="./src/js/jquery-3.6.0.min.js"></script>
+    <script>
+        window.onload=function(){
+          init();
+        }
+        function init(){
+          mAction();
+          readmore();
+        }
+        function mAction(){
+          $("menu").click(function (){    
+              $(".icon").toggleClass("close");
+              $(".links ul").toggleClass("active");
+              $(".dropdown").toggleClass("active");
+          });
+        }
+        function readmore(){
+          $(".readmore-btn").on('click', function(){
+              $(this).parent().toggleClass("showContent");
+              
+              var replaceText = $(this).parent().hasClass("showContent") ? "Read Less" : "Read More"
+              $(this).text(replaceText);
+          })
+        }
+      </script>
 </body>
 </html>
