@@ -39,6 +39,18 @@ $(function(){
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=W9ASWBPyFnE"> Dreams </a>',
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=447yaU_4DF8"> The Moment </a>',
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=JX8Jo66w4tA"> Every Step </a>',
+                                ],
+                                [
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=siCmqvfw_1g"> Spring In My Step </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=VN9TEF1OiM8"> I\'m so excited </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=d-diB65scQU"> Don\'t Worry Be Happy </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=F3TzxXfoEHo"> Sugar Zone </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=6wlbB1PTzJU"> Summer Smile </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=vFe5N7bvXXI"> Fun and Exciting Music </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=V1Tr1qCHwq4"> Carol Of The Bells </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=RIwnkTlLQUY"> Obvs </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=ofMVDTtZZ5E"> Hold On a Minute </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=LI_mwl3QcYA"> Super Mario Bros </a>',
                                 ]
                                ], 
                       trackNames = [
@@ -52,7 +64,6 @@ $(function(){
                                             '- Taylor Davis',
                                             '- Bonnie Tyler',
                                         ], 
-                                        
                                         [
                                             '',
                                             '- Jorge Méndez',
@@ -65,7 +76,6 @@ $(function(){
                                             '- Poison ',
                                             '- Kid Cudi',
                                         ], 
-
                                         [
                                             '- Beethoven',
                                             '- Pachelbel',
@@ -78,12 +88,24 @@ $(function(){
                                             '- Kenny G',
                                             '',
                                         ], 
+                                        [
+                                            '– Silent Partner',
+                                            '- The Pointer Sisters',
+                                            '- Bobby McFerrin',
+                                            '– Silent Partner',
+                                            '– Silent Partner',
+                                            '',
+                                            '- David Hicken',
+                                            '- Jamie xx',
+                                            '– Silent Partner',
+                                            '',
+                                        ],
                                     ]
                                     albumArtworks = [
                                                         ['_1','_2','_3','_4','_5','_6','_7','_8'],
                                                         ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10'],
                                                         ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10',],
-
+                                                        ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10',],
                                                     ]
                                     trackUrl = [
                                                     [
@@ -121,6 +143,18 @@ $(function(){
                                                         '../src/audio/calm/clam8.mp3',
                                                         '../src/audio/calm/clam9.mp3',
                                                         '../src/audio/calm/clam10.mp3',
+                                                    ],
+                                                    [
+                                                        '../src/audio/happy/happy1.mp3',
+                                                        '../src/audio/happy/happy2.mp3',
+                                                        '../src/audio/happy/happy3.mp3',
+                                                        '../src/audio/happy/happy4.mp3',
+                                                        '../src/audio/happy/happy5.mp3',
+                                                        '../src/audio/happy/happy6.mp3',
+                                                        '../src/audio/happy/happy7.mp3',
+                                                        '../src/audio/happy/happy8.mp3',
+                                                        '../src/audio/happy/happy9.mp3',
+                                                        '../src/audio/happy/happy10.mp3',
                                                     ]
                                                 ]
                                      playPreviousTrackButton = $('#play-previous'), 
@@ -149,6 +183,7 @@ $(function(){
         if($("#player-content").css("background-color") == 'rgb(0, 132, 149)') x = 0;
         if($("#player-content").css("background-color") == 'rgb(211, 18, 255)') x = 1;
         if($("#player-content").css("background-color") == 'rgb(255, 26, 185)') x = 2;
+        if($("#player-content").css("background-color") == 'rgb(0, 255, 193)') x = 3;
         return x;
     }
     function selectTrack(flag){

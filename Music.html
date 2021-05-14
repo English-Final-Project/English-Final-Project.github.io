@@ -39,38 +39,36 @@
     <main>
         <table>
             <tbody>
-            <tr>
-            <td width="50%"></td>
-            <td>
-                <div class="circle">
-                    <div onclick="sad();" class="sad" id="sad"></div>
-                    <div class="mood"> sad </div>  
-                </div>
-            </td>
-            <td>
-                <div class="circle">
-                    <div onclick="energe();" class="energe" id="energe"></div>
-                    <div class="mood"> Energetic </div>
-                </div>
-            </td>
-            <td>
-                <div class="circle">
-                    <div onclick="calm();" class="calm" id="calm"></div>
-                    <div class="mood"> Calm </div>
-                </div>
-            </td>
-            <td width="50%">&nbsp;</td>
-            </tr>
-            <tr>
-            <td>&nbsp;</td>
-            <td>
-                
-            </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            </tr>
+                <tr>
+                    <td width="60%"></td>
+                    <td>
+                        <div class="circle">
+                            <div onclick="sad();" class="sad" id="sad"></div>
+                            <div class="mood"> sad </div>  
+                        </div>
+                    </td>
+                    <td>
+                        <div class="circle">
+                            <div onclick="energe();" class="energe" id="energe"></div>
+                            <div class="mood"> Energetic </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="circle">
+                            <div onclick="calm();" class="calm" id="calm"></div>
+                            <div class="mood"> Calm </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="circle">
+                            <div onclick="happy();" class="happy" id="happy"></div>
+                            <div class="mood"> Happy </div>
+                        </div>
+                    </td>
+                    <td width="50%">&nbsp;</td>
+                </tr>
             </tbody>
-            </table>
+        </table>
         
         <div id="app-cover">
             <div id="player">
@@ -135,6 +133,11 @@
             $("#player-content").css("background-color", "#ff1ab9");
             $(".button").css("background-color", "#ff1ab9");
             $('#album-art').load('./calm.html');
+        }
+        function happy(){
+            $("#player-content").css("background-color", "#00ffc1");
+            $(".button").css("background-color", "#00ffc1");
+            $('#album-art').load('./happy.html');
         }
       </script>
 </body>

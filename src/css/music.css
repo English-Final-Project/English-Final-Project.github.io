@@ -240,8 +240,15 @@
 	background-image: radial-gradient(45px 45px 45deg, circle cover, #ff8bdc 0%, #ff1ab9 100%, red 95%);
 }
 
+#happy{
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #adffea 0%, #00ffc1 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #adffea, #00ffc1);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #adffea 0%, #00ffc1 100%, red 95%);
+}
+
 #sad,
 #calm,
+#happy,
 #energe{
     border-radius: 50%;
 	width: 100px;
