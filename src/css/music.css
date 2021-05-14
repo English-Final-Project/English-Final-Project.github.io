@@ -267,6 +267,12 @@ table .circle{
 	animation-timing-function: linear;
 }
 
+@media screen and (max-width: 600px) {
+    #app-cover{
+        bottom: 10%;
+    }
+}
+
 @media screen and (max-width: 470px) {
     #app-cover{
         margin-left: 10px;
