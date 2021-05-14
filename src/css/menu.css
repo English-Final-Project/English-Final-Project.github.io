@@ -217,9 +217,9 @@ body {
     }
 }
 @media screen and (max-width: 1023px) {
-    .menu .logo .name {
+    /* .menu .logo .name {
         display: none;
-    }
+    } */
     .links ul li.dSpacing {
         width: 5px;
     }

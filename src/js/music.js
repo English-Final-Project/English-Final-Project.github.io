@@ -5,18 +5,37 @@ $(function(){
                       albumArt = $('#album-art'), 
                       playPauseButton = $("#play-pause-button"),  
                       i = playPauseButton.find('i'),
-                      albums = ['Dawn','Me & You','Electro Boy','Home','Proxy (Original Mix)'], 
-                      trackNames = ['Skylike - Dawn',
-                                    'Alex Skrindo - Me & You',
-                                    'Kaaze - Electro Boy',
-                                    'Jordan Schor - Home',
-                                    'Martin Garrix - Proxy'], 
-                                    albumArtworks = ['_1','_2','_3','_4','_5'], 
-                                    trackUrl = ['https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3',
-                                                'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3',
-                                                'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3',
-                                                'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3',
-                                                'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3'],
+                      albums = [
+                                '<a target="_blank" href="https://www.youtube.com/watch?v=xTs83Ej5nS8"> Schindler\'s List Soundtrack </a>',
+                                '<a target="_blank" href="https://www.youtube.com/watch?v=pUZeSYsU0Uk"> Cold </a>',
+                                '<a target="_blank" href="https://www.youtube.com/watch?v=y3PWiRFk5GE"> Waking Life 11 </a>',
+                                '<a target="_blank" href="https://www.youtube.com/watch?v=aWIE0PX1uXk"> Sad Piano Music </a>',
+                                '<a target="_blank" href="https://www.youtube.com/watch?v=QuNhTLVgV2Y"> Sad Violin </a>',
+                                '<a target="_blank" href="https://www.youtube.com/watch?v=nOr0na6mKJQ"> The Ecstacy of Gold </a>',
+                                '<a target="_blank" href="https://www.youtube.com/watch?v=mF3DCa4TbD0"> Naruto </a>',
+                                '<a target="_blank" href="https://www.youtube.com/watch?v=lcOxhH8N3Bo"> Total Eclipse of the Heart </a>',
+                               ], 
+                      trackNames = [
+                                    '',
+                                    '- Jorge Méndez',
+                                    '- Ballade 4 part 2',
+                                    '',
+                                    '',
+                                    '- Ennio Morricone',
+                                    '- Taylor Davis',
+                                    '- Bonnie Tyler',
+                                   ], 
+                                    albumArtworks = ['_1','_2','_3','_4','_5','_6','_7','_8'], 
+                                    trackUrl = [
+                                                '../src/audio/sad/sad1.mp3',
+                                                '../src/audio/sad/sad2.mp3',
+                                                '../src/audio/sad/sad3.mp3',
+                                                '../src/audio/sad/sad4.mp3',
+                                                '../src/audio/sad/sad5.mp3',
+                                                '../src/audio/sad/sad6.mp3',
+                                                '../src/audio/sad/sad7.mp3',
+                                                '../src/audio/sad/sad8.mp3',
+                                                ],
                                      playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
 
     function playPause(){
@@ -30,7 +49,6 @@ $(function(){
             else{
                 playerTrack.removeClass('active');
                 albumArt.removeClass('active');
-                albumArt.removeClass('buffering');
                 i.attr('class','fas fa-play');
                 audio.pause();
             }
@@ -47,7 +65,6 @@ $(function(){
             if( flag == 0 )
                 i.attr('class','fa fa-play');
             else{
-                albumArt.removeClass('buffering');
                 i.attr('class','fa fa-pause');
             }
 
@@ -63,7 +80,9 @@ $(function(){
                 albumArt.addClass('active');
             }
 
-            albumName.text(currAlbum);
+            aName = document.getElementById('album-name');
+            aName.innerHTML = currAlbum;
+            //albumName.text(currAlbum);
             trackName.text(currTrackName);
             albumArt.find('img.active').removeClass('active');
             $('#'+currArtwork).addClass('active');
@@ -77,6 +96,11 @@ $(function(){
         }
     }
 
+    function ended(){
+            i.attr('class','fa fa-play');
+            albumArt.removeClass('active');
+    }
+
     function initPlayer(){	
         audio = new Audio();
 
@@ -85,10 +109,12 @@ $(function(){
 		audio.loop = false;
 		
 		playPauseButton.on('click',playPause);
-	
+        
+	    $(audio).on('ended',ended);
+
         playPreviousTrackButton.on('click',function(){ selectTrack(-1);} );
         playNextTrackButton.on('click',function(){ selectTrack(1);});
 	}
-    
 	initPlayer();
 });
+

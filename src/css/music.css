@@ -7,7 +7,7 @@
 #app-cover
 {
     position: absolute;
-    top: 50%;
+    bottom: 10%;
     right: 0;
     left: 0;
     max-width: 430px;
@@ -45,6 +45,12 @@
     color: #54576f;
     font-size: 17px;
     font-weight: bold;
+}
+
+#album-name a
+{
+    color: #54576f;
+    text-decoration: none;
 }
 
 #track-name
@@ -279,6 +285,29 @@
   border-radius: 4px;
   box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
   z-index: 125;
+}
+
+/* Create the animation blocks */
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+/* Spinning, gradient circle; CSS only! */
+#sad {
+    border-radius: 50%;
+	width: 100px;
+	height: 100px;
+    margin: 30px 30px;
+	
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #008495 0%, #008495 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #008495, #008495);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #008495 0%, #008495 100%, red 95%);
+	
+	animation-name: spin; 
+	animation-duration: 3s; /* 3 seconds */
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
 }
 
 @media screen and (max-width: 470px) {
