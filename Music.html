@@ -53,6 +53,12 @@
                     <div class="mood"> Energetic </div>
                 </div>
             </td>
+            <td>
+                <div class="circle">
+                    <div onclick="calm();" class="calm" id="calm"></div>
+                    <div class="mood"> Calm </div>
+                </div>
+            </td>
             <td width="50%">&nbsp;</td>
             </tr>
             <tr>
@@ -103,7 +109,7 @@
     <script>
         window.onload=function(){
           init();
-          alert("Click on the name to listen to the full music");
+         //alert("Click on the name to listen to the full music");
         }
         function init(){
           mAction();
@@ -124,6 +130,11 @@
             $("#player-content").css("background-color", "#d312ff");
             $(".button").css("background-color", "#d312ff");
             $('#album-art').load('./energy.html');
+        }
+        function calm(){
+            $("#player-content").css("background-color", "#ff1ab9");
+            $(".button").css("background-color", "#ff1ab9");
+            $('#album-art').load('./calm.html');
         }
       </script>
 </body>

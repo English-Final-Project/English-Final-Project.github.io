@@ -27,6 +27,18 @@ $(function(){
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=3X9LvC9WkkQ"> Hungarian Dance No. 5 </a>',
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=xCChxBSRo1Y"> Talk Dirty To Me </a>',
                                     '<a target="_blank" href="https://www.youtube.com/watch?v=ICaTsTkBPV8"> Erase Me ft. Kanye West </a>',
+                                ],
+                                [
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=2fcX2dWmR6g"> Für Elise </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=NlprozGcs80"> Canon </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=JbjzPKTfjlc"> Nuvole Bianche </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=da7gMOY8bTA"> Digging Shelters </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=PoaT6WXUV_M"> Hey there delilah </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=70PPHLsFq7I"> Proud of you </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=4w8PCYlzlmg"> Over The Garden Wall </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=W9ASWBPyFnE"> Dreams </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=447yaU_4DF8"> The Moment </a>',
+                                    '<a target="_blank" href="https://www.youtube.com/watch?v=JX8Jo66w4tA"> Every Step </a>',
                                 ]
                                ], 
                       trackNames = [
@@ -53,10 +65,24 @@ $(function(){
                                             '- Poison ',
                                             '- Kid Cudi',
                                         ], 
+
+                                        [
+                                            '- Beethoven',
+                                            '- Pachelbel',
+                                            '- Ludovico Einaudi',
+                                            '- Neil Halstead',
+                                            '',
+                                            '- Fiona Fung',
+                                            '- Into The Unknown',
+                                            '',
+                                            '- Kenny G',
+                                            '',
+                                        ], 
                                     ]
                                     albumArtworks = [
                                                         ['_1','_2','_3','_4','_5','_6','_7','_8'],
                                                         ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10'],
+                                                        ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10',],
 
                                                     ]
                                     trackUrl = [
@@ -82,6 +108,19 @@ $(function(){
                                                         '../src/audio/energy/energy8.mp3',
                                                         '../src/audio/energy/energy9.mp3',
                                                         '../src/audio/energy/energy10.mp3',
+                                                    ],
+
+                                                    [
+                                                        '../src/audio/calm/clam1.mp3',
+                                                        '../src/audio/calm/clam2.mp3',
+                                                        '../src/audio/calm/clam3.mp3',
+                                                        '../src/audio/calm/clam4.mp3',
+                                                        '../src/audio/calm/clam5.mp3',
+                                                        '../src/audio/calm/clam6.mp3',
+                                                        '../src/audio/calm/clam7.mp3',
+                                                        '../src/audio/calm/clam8.mp3',
+                                                        '../src/audio/calm/clam9.mp3',
+                                                        '../src/audio/calm/clam10.mp3',
                                                     ]
                                                 ]
                                      playPreviousTrackButton = $('#play-previous'), 
@@ -109,6 +148,7 @@ $(function(){
         console.log($("#player-content").css("background-color"));
         if($("#player-content").css("background-color") == 'rgb(0, 132, 149)') x = 0;
         if($("#player-content").css("background-color") == 'rgb(211, 18, 255)') x = 1;
+        if($("#player-content").css("background-color") == 'rgb(255, 26, 185)') x = 2;
         return x;
     }
     function selectTrack(flag){

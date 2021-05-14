@@ -234,7 +234,14 @@
 	background-image: radial-gradient(45px 45px 45deg, circle cover, #e882ff 0%, #d312ff 100%, red 95%);
 }
 
+#calm{
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #ff8bdc 0%, #ff1ab9 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #ff8bdc, #ff1ab9);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #ff8bdc 0%, #ff1ab9 100%, red 95%);
+}
+
 #sad,
+#calm,
 #energe{
     border-radius: 50%;
 	width: 100px;
