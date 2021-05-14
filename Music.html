@@ -36,9 +36,35 @@
 
 
     <main>
-        <div class="circle">
-            <div class="sad" id="sad"></div>
-        </div>
+        <table>
+            <tbody>
+            <tr>
+            <td width="50%"></td>
+            <td>
+                <div class="circle">
+                    <div onclick="sad();" class="sad" id="sad"></div>
+                    <div class="mood"> sad </div>  
+                </div>
+            </td>
+            <td>
+                <div class="circle">
+                    <div onclick="energe();" class="energe" id="energe"></div>
+                    <div class="mood"> Energetic </div>
+                </div>
+            </td>
+            <td width="50%">&nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>
+                
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            </tr>
+            </tbody>
+            </table>
+        
         <div id="app-cover">
             <div id="player">
                 <div id="player-track">
@@ -47,14 +73,7 @@
                 </div>
                 <div id="player-content">
                     <div id="album-art">
-                        <img src="./src/image/sad/1.jpg" class="active" id="_1">
-                        <img src="./src/image/sad/2.jpg" id="_2">
-                        <img src="./src/image/sad/3.jpg" id="_3">
-                        <img src="./src/image/sad/4.jpg" id="_4">
-                        <img src="./src/image/sad/5.png" id="_5">
-                        <img src="./src/image/sad/6.jpg" id="_6">
-                        <img src="./src/image/sad/7.jpg" id="_7">
-                        <img src="./src/image/sad/8.jpg" id="_8">
+
                     </div>
                     <div id="player-controls">
                         <div class="control">
@@ -83,7 +102,7 @@
     <script>
         window.onload=function(){
           init();
-          /* alert("Click on the name to listen to the full music"); */
+          alert("Click on the name to listen to the full music");
         }
         function init(){
           mAction();
@@ -94,6 +113,16 @@
               $(".links ul").toggleClass("active");
               $(".dropdown").toggleClass("active");
           });
+        }
+        function sad(){
+            $("#player-content").css("background-color", "#008495");
+            $(".button").css("background-color", "#008495");
+            $('#album-art').load('./sad.html');
+        }
+        function energe(){
+            $("#player-content").css("background-color", "#d312ff");
+            $(".button").css("background-color", "#d312ff");
+            $('#album-art').load('./energy.html');
         }
       </script>
 </body>
