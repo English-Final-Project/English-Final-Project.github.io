@@ -235,7 +235,7 @@ $(function(){
 
     function initPlayer(){	
         audio = new Audio();
-        $('.circle').on('click', function(){
+        $('.mCircle').on('click', function(){
             currIndex = -1;
             ended();
             selectTrack(0);
