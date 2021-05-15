@@ -276,14 +276,6 @@ body{
 	animation-timing-function: linear;
 }
 
-@media screen and (max-height: 250px) {
-    #app-cover{
-        height: 50px;
-        width: 215px;
-    }
-
-}
-
 @media screen and (max-width: 600px) {
     #sad,
     #calm,
