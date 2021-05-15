@@ -220,26 +220,13 @@ body{
 	from { transform: rotate(0deg); }
 	to { transform: rotate(360deg); }
 }
-<<<<<<< HEAD
-
-.category{
-    margin: auto;
-    width: 440px;
-    height: auto;
-}
-
 .mCircle{
-=======
-table .circle{
->>>>>>> parent of 7644a24 (menu fix)
     display: block;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 150px;
     margin-top: 30px;
-    float: left;
     background: transparent;
 }
-
 
 #sad{
     background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #01cce7 0%, #008495 100%, red 95%);
@@ -280,30 +267,9 @@ table .circle{
 	animation-timing-function: linear;
 }
 
-@media screen and (max-width: 600px) {
-<<<<<<< HEAD
-    #sad,
-    #calm,
-    #happy,
-    #energe{
-        width: 90px;
-        height: 90px;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-    .mood{
-        width: 80px;
-        margin-left: 20px;
-    }
-    .category{
-        margin: auto;
-        width: 250px;
-        height: auto;
-    }
-=======
->>>>>>> parent of 7644a24 (menu fix)
+@media screen and (max-height: 600px) {
     #app-cover{
-        bottom: 15%;
+        bottom: 10%;
     }
 }
 
