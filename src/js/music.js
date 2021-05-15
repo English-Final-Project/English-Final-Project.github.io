@@ -179,6 +179,7 @@ $(function(){
     }
     function category(){
         var x = 0;
+        console.log($("#player-content").css("background-color"));
         if($("#player-content").css("background-color") == 'rgb(0, 132, 149)') x = 0;
         if($("#player-content").css("background-color") == 'rgb(211, 18, 255)') x = 1;
         if($("#player-content").css("background-color") == 'rgb(255, 26, 185)') x = 2;

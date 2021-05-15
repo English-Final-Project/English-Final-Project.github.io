@@ -42,25 +42,25 @@
                 <tr>
                     <td width="60%"></td>
                     <td>
-                        <div class="mCircle">
+                        <div class="circle">
                             <div onclick="sad();" class="sad" id="sad"></div>
                             <div class="mood"> sad </div>  
                         </div>
                     </td>
                     <td>
-                        <div class="mCircle energe">
+                        <div class="circle">
                             <div onclick="energe();" class="energe" id="energe"></div>
                             <div class="mood"> Energetic </div>
                         </div>
                     </td>
                     <td>
-                        <div class="mCircle">
+                        <div class="circle">
                             <div onclick="calm();" class="calm" id="calm"></div>
                             <div class="mood"> Calm </div>
                         </div>
                     </td>
                     <td>
-                        <div class="mCircle happy">
+                        <div class="circle">
                             <div onclick="happy();" class="happy" id="happy"></div>
                             <div class="mood"> Happy </div>
                         </div>
@@ -107,7 +107,7 @@
     <script>
         window.onload=function(){
           init();
-         alert("Click on the name to listen to the full music");
+         //alert("Click on the name to listen to the full music");
         }
         function init(){
           mAction();
@@ -120,25 +120,21 @@
           });
         }
         function sad(){
-            $('body').css("background-image", "url('./src/image/bg1.jpg')");
             $("#player-content").css("background-color", "#008495");
             $(".button").css("background-color", "#008495");
             $('#album-art').load('./sad.html');
         }
         function energe(){
-            $('body').css("background-image", "url('./src/image/bg3.jpg')");
             $("#player-content").css("background-color", "#d312ff");
             $(".button").css("background-color", "#d312ff");
             $('#album-art').load('./energy.html');
         }
         function calm(){
-            $('body').css("background-image", "url('./src/image/bg2.jpg')");
             $("#player-content").css("background-color", "#ff1ab9");
             $(".button").css("background-color", "#ff1ab9");
             $('#album-art').load('./calm.html');
         }
         function happy(){
-            $('body').css("background-image", "url('./src/image/bg4.jpg')");
             $("#player-content").css("background-color", "#00ffc1");
             $(".button").css("background-color", "#00ffc1");
             $('#album-art').load('./happy.html');
