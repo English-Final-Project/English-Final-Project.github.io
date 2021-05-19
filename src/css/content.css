@@ -100,7 +100,9 @@ p {
     opacity: 0;
     pointer-events: none;
   }
-  
+  .open-content a{
+    text-decoration: none;
+  }
   .open-content img {
       display: none;
   }
